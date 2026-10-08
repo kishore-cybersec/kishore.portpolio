@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kishore | Cybersecurity Student, Aspiring Cloud Security Engineer</title>
+<meta name="description" content="Portfolio of Kishore, a cybersecurity student building strong foundations in networking, Linux, cybersecurity and AWS on the path to Cloud Security Engineer.">
+<meta property="og:title" content="Kishore | Aspiring Cloud Security Engineer">
+<meta property="og:description" content="Building secure cloud environments with strong foundations in networking, Linux, cybersecurity, and AWS.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap">
+<style>
+:root{--bg:#070b16;--bg2:#0d1424;--card:rgba(255,255,255,.04);--line:rgba(140,170,255,.16);--tx:#e8edf8;--mut:#93a0bd;--blue:#3b82f6;--cyan:#22d3ee;--pur:#8b5cf6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:84px;height:auto}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden;background-image:radial-gradient(900px 500px at 85% -5%,rgba(59,130,246,.18),transparent),radial-gradient(700px 500px at -5% 35%,rgba(139,92,246,.12),transparent)}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;margin:0}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:92px 0}
+section>.wrap>h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:10px}
+.lead{color:var(--mut);max-width:62ch;margin:0 0 38px}
+.glass{background:var(--card);border:1px solid var(--line);border-radius:16px;backdrop-filter:blur(10px);padding:24px;transition:border-color .25s,box-shadow .25s,transform .25s}
+.glass:hover{border-color:rgba(34,211,238,.45);box-shadow:0 0 28px rgba(34,211,238,.1);transform:translateY(-3px)}
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;font-weight:500;border:1px solid var(--line);background:var(--card);cursor:pointer;color:var(--tx);font-size:.95rem;font-family:inherit;transition:.2s}
+.btn:hover{border-color:var(--cyan);box-shadow:0 0 20px rgba(34,211,238,.2)}
+.btn.p{background:linear-gradient(135deg,var(--blue),var(--pur));border:0}
+.btn.sm{padding:8px 14px;font-size:.85rem}
+.chip{display:inline-block;padding:3px 11px;margin:0 6px 7px 0;border:1px solid var(--line);border-radius:99px;font-size:.82rem;color:#c5d0ea;background:rgba(255,255,255,.03)}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(7,11,22,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:700 1.2rem "Space Grotesk";letter-spacing:.3px}
+.logo i{font-style:normal;color:var(--cyan)}
+.links{display:flex;gap:4px;align-items:center}
+.links a{padding:8px 11px;border-radius:8px;color:var(--mut);font-size:.9rem;transition:.2s}
+.links a:hover,.links a.on{color:var(--tx);background:rgba(255,255,255,.06)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--tx);border-radius:8px;padding:8px 10px;cursor:pointer}
+@media(max-width:1000px){.burger{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg2);padding:12px 22px;border-bottom:1px solid var(--line)}.links.open{display:flex}.nav-cta{display:none}}
+/* hero */
+.hero{padding:70px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid rgba(34,211,238,.35);border-radius:99px;font-size:.85rem;color:var(--cyan);background:rgba(34,211,238,.06);margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.3;box-shadow:0 0 10px var(--cyan)}}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);margin-bottom:14px;letter-spacing:-1px}
+.hero h1 span{background:linear-gradient(90deg,var(--cyan),var(--blue) 60%,var(--pur));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font:500 clamp(1.05rem,2.2vw,1.35rem) "Space Grotesk";margin:0 0 14px}
+.hero p.t{color:var(--mut);max-width:50ch;margin:0 0 28px}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.soc{margin-top:26px}
+.soc a{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;color:var(--mut);transition:.2s}
+.soc a:hover{color:var(--cyan);border-color:var(--cyan)}
+.soc svg,.ico{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.vis{width:100%;max-width:470px;margin:0 auto;display:block}
+.flow{stroke-dasharray:5 7;animation:dash 2.2s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-48}}
+.fl{animation:fl 6s ease-in-out infinite}.fl2{animation-delay:-3s}
+@keyframes fl{50%{transform:translateY(-9px)}}
+.fade{animation:in .9s ease both}
+@keyframes in{from{opacity:0;transform:translateY(14px)}}
+/* about */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+.about p{color:#c3cde6;margin:0 0 16px}
+.info small{color:var(--mut);display:block}
+.info b{font:600 1.05rem "Space Grotesk"}
+.info .glass{margin-bottom:14px;padding:18px 22px}
+/* timeline */
+.tl{position:relative;padding-left:34px;border-left:2px solid var(--line);margin-left:10px}
+.tl::after{content:"";position:absolute;left:-2px;top:0;width:2px;height:0;background:linear-gradient(var(--cyan),var(--pur));transition:height 1.6s ease}
+.tl.go::after{height:100%}
+.step{position:relative;margin-bottom:20px;opacity:0;transform:translateX(-14px);transition:.6s}
+.step.show{opacity:1;transform:none}
+.step::before{content:"";position:absolute;left:-43px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan);box-shadow:0 0 12px rgba(34,211,238,.5)}
+.step.now::before{background:var(--cyan)}
+.step h3{font-size:1.25rem;margin-bottom:10px}
+.step h3 em{font-style:normal;color:var(--cyan);margin-right:8px}
+.goal{margin-top:6px;padding:16px 22px;border-radius:14px;border:1px dashed rgba(139,92,246,.6);color:#d6c9ff;font:500 1.1rem "Space Grotesk"}
+/* cards */
+.card h3{font-size:1.15rem;margin:10px 0 8px}
+.card p{color:var(--mut);margin:0 0 14px;font-size:.95rem}
+.ibox{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(59,130,246,.25),rgba(139,92,246,.25));border:1px solid var(--line);color:var(--cyan)}
+.cert .meta{color:var(--mut);font-size:.9rem;margin:4px 0}
+.ph{color:#fbbf24}
+.st{float:right;font-size:.78rem;padding:3px 10px;border-radius:99px;border:1px solid}
+.st.Completed{color:#34d399;border-color:#34d39966}.st.In-Progress{color:#fbbf24;border-color:#fbbf2466}.st.Planned{color:#a5b4fc;border-color:#a5b4fc66}
+/* mindset */
+.mind{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+@media(max-width:860px){.mind{grid-template-columns:1fr}}
+.layers{display:flex;flex-direction:column;gap:6px}
+.layer{display:flex;align-items:center;gap:14px;padding:13px 18px;border:1px solid var(--line);border-radius:12px;background:var(--card);cursor:pointer;color:var(--tx);font:500 .98rem Inter;text-align:left;transition:.25s}
+.layer:hover,.layer[aria-pressed=true]{border-color:var(--cyan);background:rgba(34,211,238,.08);box-shadow:0 0 22px rgba(34,211,238,.12)}
+.arr{text-align:center;color:var(--blue);line-height:1;font-size:.9rem}
+#detail{min-height:170px;position:sticky;top:96px}
+#detail h3{font-size:1.4rem;margin-bottom:10px;color:var(--cyan)}
+#detail p{color:#c3cde6;margin:0}
+/* career */
+.path{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:24px}
+.path span.n{padding:11px 18px;border:1px solid var(--line);border-radius:10px;background:var(--card);font-weight:500}
+.path span.n:first-child{border-color:var(--cyan);color:var(--cyan)}
+.path span.n:last-child{border-color:var(--pur);color:#c4b5fd}
+.path .a{color:var(--mut)}
+/* resume + contact */
+.cta{text-align:center;padding:52px 24px;background:linear-gradient(135deg,rgba(59,130,246,.12),rgba(139,92,246,.12))}
+.cta h2{margin-bottom:12px}.cta p{color:var(--mut);max-width:56ch;margin:0 auto 24px}
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+.clink{display:flex;gap:14px;align-items:center;margin-bottom:14px;padding:16px 20px}
+form{display:grid;gap:16px}
+label{font-size:.9rem;color:var(--mut);display:block;margin-bottom:6px}
+input,textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--tx);font:inherit}
+input:focus,textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(34,211,238,.15)}
+.err{color:#f87171;font-size:.82rem;min-height:1.1em;margin-top:4px}
+input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#f87171}
+#ok{color:#34d399;margin:0}
+.hp{position:absolute;left:-9999px}
+footer{border-top:1px solid var(--line);padding:42px 0;text-align:center;color:var(--mut)}
+footer b{font:700 1.3rem "Space Grotesk";color:var(--tx)}
+footer .row{justify-content:center;margin:16px 0}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.rv.show{opacity:1;transform:none}
+#load{position:fixed;inset:0;background:var(--bg);display:grid;place-items:center;z-index:99;transition:opacity .5s}
+#load div{width:46px;height:46px;border:3px solid var(--line);border-top-color:var(--cyan);border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv,.step{opacity:1;transform:none}.tl::after{height:100%}}
+</style>
+</head>
+<body>
+<div id="load" aria-hidden="true"><div></div></div>
+<header>
+ <nav class="wrap" aria-label="Main">
+  <a href="#home" class="logo">kishore<i>.cloud</i></a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="links" aria-label="Toggle menu">Menu</button>
+  <div class="links" id="links"></div>
+ </nav>
+</header>
+<main>
+<section id="home" class="hero"><div class="wrap">
+ <div class="fade">
+  <div class="badge"><span class="dot"></span>Open to Cloud Security Opportunities</div>
+  <h1>Hi, I'm <span>Kishore</span></h1>
+  <p class="sub">Cybersecurity Student | Aspiring Cloud Security Engineer</p>
+  <p class="t">Building secure cloud environments with strong foundations in networking, Linux, cybersecurity, and AWS.</p>
+  <div class="row"><a class="btn p" href="#projects">Explore My Work</a><a class="btn" href="/resume.pdf" download>Download Resume</a></div>
+  <div class="row soc" id="socials"></div>
+ </div>
+ <svg class="vis fade" viewBox="0 0 440 420" role="img" aria-label="Secure cloud infrastructure: cloud, network, Linux and security layers">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+  <radialGradient id="r"><stop offset="0" stop-color="#3b82f6" stop-opacity=".35"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="220" cy="210" r="200" fill="url(#r)"/>
+  <g class="flow" fill="none" stroke="url(#g)" stroke-width="1.6" opacity=".8">
+   <path d="M220 110V170"/><path d="M110 250Q150 210 190 215"/><path d="M330 250Q290 210 250 215"/><path d="M220 255V320"/><path d="M110 330Q150 330 190 345"/><path d="M330 330Q290 330 250 345"/></g>
+  <g class="fl"><path d="M150 100a34 34 0 0 1 8-66 46 46 0 0 1 88-6 36 36 0 0 1 36 44 28 28 0 0 1-4 28z" transform="translate(-8 14)" fill="#0d1424" stroke="url(#g)" stroke-width="2"/><text x="220" y="75" text-anchor="middle" fill="#e8edf8" font-size="13" font-family="Space Grotesk">AWS Cloud</text></g>
+  <g><path d="M220 168l52 18v38c0 30-22 48-52 62-30-14-52-32-52-62v-38z" fill="#0d1424" stroke="url(#g)" stroke-width="2.2"/><path d="M198 226l16 16 30-34" fill="none" stroke="#22d3ee" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g class="fl fl2"><rect x="40" y="236" width="88" height="62" rx="10" fill="#0d1424" stroke="#3b82f6" stroke-width="1.6"/><text x="84" y="262" text-anchor="middle" fill="#93c5fd" font-size="12" font-family="Space Grotesk">Network</text><text x="84" y="282" text-anchor="middle" fill="#93a0bd" font-size="10">VPC | VLAN</text></g>
+  <g class="fl fl2"><rect x="312" y="236" width="88" height="62" rx="10" fill="#0d1424" stroke="#8b5cf6" stroke-width="1.6"/><text x="356" y="262" text-anchor="middle" fill="#c4b5fd" font-size="12" font-family="Space Grotesk">Linux</text><text x="356" y="282" text-anchor="middle" fill="#93a0bd" font-size="10">EC2 | SSH</text></g>
+  <g class="fl"><rect x="150" y="332" width="140" height="22" rx="6" fill="#0d1424" stroke="#22d3ee" stroke-opacity=".6"/><rect x="150" y="360" width="140" height="22" rx="6" fill="#0d1424" stroke="#22d3ee" stroke-opacity=".6"/><circle cx="165" cy="343" r="3" fill="#22d3ee"/><circle cx="165" cy="371" r="3" fill="#22d3ee"/><text x="220" y="347" text-anchor="middle" fill="#93a0bd" font-size="10">S3 | Logs</text></g>
+ </svg>
+</div></section>
+
+<section id="about"><div class="wrap">
+ <h2 class="rv">About Me</h2><p class="lead rv">Foundations first, then specialization.</p>
+ <div class="about rv">
+  <div>
+   <p>I'm Kishore, a cybersecurity student passionate about cloud security, infrastructure security, and secure cloud architecture.</p>
+   <p>I have completed the fundamentals of networking, Linux, cloud computing with AWS, and cybersecurity, supported by valuable certifications.</p>
+   <p>My approach is to build strong technical foundations first and then apply them to cloud security. I believe understanding networking, Linux systems, and cybersecurity fundamentals is essential for securing modern cloud environments.</p>
+   <p>My current goal is to develop practical skills in AWS security, cloud infrastructure security, IAM, network security, monitoring, and automation, and eventually become a skilled Cloud Security Engineer.</p>
+  </div>
+  <div class="info">
+   <div class="glass"><small>Focus</small><b>Cloud Security</b></div>
+   <div class="glass"><small>Foundation</small><b>Networking + Linux + Cybersecurity + AWS</b></div>
+   <div class="glass"><small>Career Goal</small><b>Cloud Security Engineer</b></div>
+  </div>
+ </div>
+</div></section>
+
+<section id="journey"><div class="wrap">
+ <h2 class="rv">My Learning Journey</h2><p class="lead rv">Five stages, each one building on the last.</p>
+ <div class="tl" id="tl"></div>
+ <div class="goal rv" style="margin-top:22px">Destination: Cloud Security Engineer</div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+ <h2 class="rv">Technical Skills</h2><p class="lead rv">What I have studied and practiced, grouped by area.</p>
+ <div class="grid g3" id="skillGrid"></div>
+</div></section>
+
+<section id="certifications"><div class="wrap">
+ <h2 class="rv">Certifications &amp; Learning</h2><p class="lead rv">Placeholders below. Replace each one with your real credential in the data block at the top of the script.</p>
+ <div class="grid g2" id="certGrid"></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+ <h2 class="rv">Featured Projects</h2><p class="lead rv">Status labels are editable. Only mark a project Completed when it is.</p>
+ <div class="grid g3" id="projGrid"></div>
+</div></section>
+
+<section id="why"><div class="wrap">
+ <h2 class="rv">Why Cloud Security?</h2>
+ <p class="lead rv">Cloud environments are becoming the foundation of modern applications and infrastructure. As organizations move workloads to the cloud, securing identities, networks, workloads, data, and configurations becomes increasingly important.<br><br>My goal is to specialize in protecting cloud environments by combining my knowledge of networking, Linux, cybersecurity, and AWS.</p>
+ <div class="grid g3" id="whyGrid"></div>
+</div></section>
+
+<section id="mindset"><div class="wrap">
+ <h2 class="rv">My Cloud Security Mindset</h2><p class="lead rv">Select a layer to see what it protects.</p>
+ <div class="mind rv"><div class="layers" id="layers"></div><div class="glass" id="detail" aria-live="polite"></div></div>
+</div></section>
+
+<section id="learning"><div class="wrap">
+ <h2 class="rv">Currently Learning</h2>
+ <div class="grid g3 rv" id="nowGrid" style="margin-top:28px"></div>
+ <p class="lead rv" style="margin:26px 0 0;color:var(--cyan)">Always learning. Always building.</p>
+</div></section>
+
+<section id="goals"><div class="wrap">
+ <h2 class="rv">Career Goals</h2>
+ <div class="path rv" id="path" style="margin-top:28px"></div>
+ <div class="goal rv">Long-term goal: Become a highly skilled Cloud Security Engineer capable of designing, securing, monitoring, and automating secure cloud environments.</div>
+</div></section>
+
+<section id="resume"><div class="wrap"><div class="glass cta rv">
+ <h2>Want to know more about my journey?</h2>
+ <p>Download my resume to explore my education, certifications, technical skills, projects, and career journey.</p>
+ <a class="btn p" href="/resume.pdf" download>Download Resume</a>
+</div></div></section>
+
+<section id="contact"><div class="wrap">
+ <h2 class="rv">Let's Connect</h2>
+ <p class="lead rv">I'm always interested in connecting with cybersecurity professionals, cloud engineers, recruiters, developers, and fellow learners.</p>
+ <div class="contact rv">
+  <div id="clinks"></div>
+  <form class="glass" id="cf" novalidate>
+   <div><label for="n">Name</label><input id="n" name="name" autocomplete="name"><div class="err" id="e-n"></div></div>
+   <div><label for="m">Email</label><input id="m" name="email" type="email" autocomplete="email"><div class="err" id="e-m"></div></div>
+   <div><label for="s">Subject</label><input id="s" name="subject"><div class="err" id="e-s"></div></div>
+   <div><label for="b">Message</label><textarea id="b" name="message" rows="5"></textarea><div class="err" id="e-b"></div></div>
+   <input class="hp" id="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <div class="row"><button class="btn p" type="submit">Send Message</button><p id="ok" role="status"></p></div>
+  </form>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <b>Kishore</b><p style="margin:4px 0">Cybersecurity Student | Aspiring Cloud Security Engineer</p>
+ <div class="row soc" id="fsoc"></div>
+ <p style="margin:0">Building skills. Securing the cloud.</p>
+ <p style="margin:6px 0 0;font-size:.85rem">&copy; 2026 Kishore. All rights reserved.</p>
+</div></footer>
+
+<script>
+/* ============ EDIT YOUR CONTENT HERE ============ */
+const SOCIALS=[
+ {name:"GitHub",url:"https://github.com/your-username",icon:'<path d="M9 19c-4 1-4-2-6-2m12 4v-3.5a3 3 0 0 0-.8-2.3c2.800-.3 5.800-1.400 5.800-6.200a4.800 4.800 0 0 0-1.300-3.300 4.500 4.500 0 0 0-.1-3.300s-1.100-.3-3.500 1.300a12 12 0 0 0-6.200 0C6.500 2.700 5.400 3 5.400 3a4.500 4.500 0 0 0-.1 3.300A4.800 4.800 0 0 0 4 9.600c0 4.800 3 5.900 5.800 6.200a3 3 0 0 0-.8 2.300V21"/>'},
+ {name:"LinkedIn",url:"https://linkedin.com/in/your-profile",icon:'<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>'},
+ {name:"Email",url:"mailto:your-email@example.com",icon:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>'}
+];
+const CONTACT_EMAIL="your-email@example.com";
+const SKILLS=[
+ {t:"Networking",i:'<circle cx="12" cy="5" r="2.500"/><circle cx="5" cy="19" r="2.500"/><circle cx="19" cy="19" r="2.500"/><path d="M12 7.500v4M12 11.500l-5.500 5.500M12 11.500l5.500 5.500"/>',s:["TCP/IP","OSI Model","IPv4","Subnetting","Routing","Switching","VLAN","NAT","DHCP","DNS","Network Troubleshooting"]},
+ {t:"Linux",i:'<path d="m4 17 6-6-6-6M12 19h8"/>',s:["Linux Fundamentals","File System","Users & Permissions","Processes","SSH","Networking Commands","Bash Fundamentals","System Administration Basics"]},
+ {t:"Cybersecurity",i:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',s:["Security Fundamentals","CIA Triad","Authentication","Authorization","Vulnerability Fundamentals","Network Security","Firewalls","IDS/IPS","Security Monitoring","Risk Fundamentals"]},
+ {t:"AWS / Cloud",i:'<path d="M17.500 19H9a7 7 0 1 1 6.700-9h1.800a4.500 4.500 0 0 1 0 9z"/>',s:["AWS Fundamentals","EC2","S3","IAM","VPC","Security Groups","Cloud Networking","Cloud Architecture Basics"]},
+ {t:"Cloud Security",i:'<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',s:["IAM Security","Least Privilege","Network Security","Secure Cloud Configuration","Logging & Monitoring","Cloud Security Architecture","Security Automation"]}
+];
+const STAGES=[
+ {t:"Networking",d:["IP addressing","Subnetting","TCP/IP","OSI model","DNS","DHCP","NAT","Routing","Switching","VLANs","Network troubleshooting"]},
+ {t:"Linux",d:["Filesystem","Users and permissions","Processes","Package management","Networking commands","SSH","Shell / terminal","Basic Bash"]},
+ {t:"Cybersecurity",d:["CIA Triad","Authentication & authorization","Vulnerabilities","Threats","Risk","Cryptography fundamentals","Network security","Firewalls","IDS/IPS","Security monitoring"]},
+ {t:"AWS Cloud",d:["Cloud concepts","Global infrastructure","EC2","S3","IAM","VPC","Security Groups","Cloud networking","Cloud storage","Basic architecture"]},
+ {t:"Cloud Security (current focus)",d:["AWS security","IAM security","Network security","Secure cloud architecture","Logging and monitoring","Best practices","Security automation","Infrastructure security"]}
+];
+const CERTS=[
+ {cat:"Networking",hint:"Cisco / networking certification"},
+ {cat:"Linux",hint:"Linux Foundation / Linux certification"},
+ {cat:"Cloud",hint:"AWS / cloud certification"},
+ {cat:"Cybersecurity",hint:"Cybersecurity certification"}
+].map(c=>({...c,name:"[Certification Name]",org:"[Issuing Organization]",date:"[Month Year]",id:"[Credential ID]",url:"#"}));
+const PROJECTS=[
+ {n:"Small Office Network Simulation",st:"Planned",d:"Designed and simulated a small-office network using Cisco Packet Tracer, implementing IP addressing, VLANs, routing, DHCP, and network connectivity.",tech:["Cisco Packet Tracer","Networking","VLAN","DHCP","Routing"],view:"#",gh:"https://github.com/your-username"},
+ {n:"Linux System Administration Lab",st:"Planned",d:"Hands-on Linux practice focused on filesystem management, users and permissions, processes, networking commands, SSH, and system administration fundamentals.",tech:["Linux","Ubuntu","Bash","SSH"],view:"#",gh:"https://github.com/your-username"},
+ {n:"AWS Cloud Security Lab",st:"In Progress",d:"Hands-on AWS security lab focused on IAM, secure access, VPC security, security groups, logging, and cloud security best practices.",tech:["AWS","IAM","VPC","Security Groups","Cloud Security"],view:"#",gh:"https://github.com/your-username"}
+];
+const WHY=["Identity & Access Management","Network Security","Data Protection","Threat Detection","Security Monitoring","Secure Architecture"];
+const LAYERS=[
+ ["User","Every request starts with a person or a service. Nothing is trusted until it proves who it is."],
+ ["Identity & Access Management","Who can do what. Least privilege, strong authentication and short-lived access keep a stolen credential from becoming a breach."],
+ ["Secure Network / VPC","Private subnets, security groups and controlled entry points limit what can reach what."],
+ ["Applications & EC2","Hardened, patched workloads with only the ports and permissions they need."],
+ ["Data / S3","Encryption and tight bucket policies protect data at rest and in transit."],
+ ["Logging & Monitoring","Activity is recorded and watched, so unusual behavior leaves a trail."],
+ ["Security Detection & Response","Alerts lead to action: investigate, contain, fix, and learn from it."]
+];
+const NOW=["Advanced AWS Security","Cloud Security","Linux Administration","Network Security","Bash / Automation","AI Tools for Cybersecurity"];
+const PATH=["Cybersecurity Student","Cloud Security Intern","Cloud Security Engineer","Cloud Security Specialist","Cloud Security Architect"];
+const NAV=[["Home","home"],["About","about"],["Skills","skills"],["Certifications","certifications"],["Projects","projects"],["Learning Journey","journey"],["Resume","resume"],["Contact","contact"]];
+/* ============ RENDERING ============ */
+const $=s=>document.querySelector(s);
+const svg=p=>`<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">${p}</svg>`;
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+$("#links").innerHTML=NAV.map(([l,id])=>`<a href="#${id}">${l}</a>`).join("")+'<a class="btn p sm nav-cta" href="#projects" style="margin-left:6px;color:#fff">View My Projects</a>';
+const soc=SOCIALS.map(s=>`<a href="${s.url}" aria-label="${s.name}" target="_blank" rel="noopener">${svg(s.icon)}</a>`).join("");
+$("#socials").innerHTML=soc;$("#fsoc").innerHTML=soc;
+$("#clinks").innerHTML=SOCIALS.map(s=>`<a class="glass clink" href="${s.url}" target="_blank" rel="noopener"><span class="ibox">${svg(s.icon)}</span><span><b>${s.name}</b><br><small style="color:var(--mut)">${s.name==="Email"?CONTACT_EMAIL:s.url.replace("https://","")}</small></span></a>`).join("");
+$("#skillGrid").innerHTML=SKILLS.map(k=>`<div class="glass card rv"><span class="ibox">${svg(k.i)}</span><h3>${k.t}</h3><div>${k.s.map(x=>`<span class="chip">${esc(x)}</span>`).join("")}</div></div>`).join("");
+$("#tl").innerHTML=STAGES.map((s,i)=>`<div class="step glass${i==4?" now":""}"><h3><em>${String(i+1).padStart(2,"0")}</em>${s.t}</h3><div>${s.d.map(x=>`<span class="chip">${x}</span>`).join("")}</div></div>`).join("");
+$("#certGrid").innerHTML=CERTS.map(c=>`<div class="glass card cert rv"><span class="chip">${c.cat}</span><h3 class="ph">${c.name}</h3><p style="margin:0 0 8px">Suggested: ${c.hint}</p><div class="meta">Issuer: <span class="ph">${c.org}</span></div><div class="meta">Completed: <span class="ph">${c.date}</span></div><div class="meta">Credential ID: <span class="ph">${c.id}</span></div><a class="btn sm" style="margin-top:14px" href="${c.url}">View Credential</a></div>`).join("");
+$("#projGrid").innerHTML=PROJECTS.map(p=>`<div class="glass card rv"><span class="st ${p.st.replace(" ","-")}">${p.st}</span><h3>${p.n}</h3><p>${p.d}</p><div>${p.tech.map(x=>`<span class="chip">${x}</span>`).join("")}</div><div class="row" style="margin-top:12px"><a class="btn sm p" href="${p.view}">View Project</a><a class="btn sm" href="${p.gh}" target="_blank" rel="noopener">GitHub</a></div></div>`).join("");
+const WI=['<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>','<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>','<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.700 3.600 3 8 3s8-1.300 8-3V5M4 12c0 1.700 3.600 3 8 3s8-1.300 8-3"/>','<circle cx="11" cy="11" r="7"/><path d="m21 21-5-5"/>','<path d="M3 12h4l3-8 4 16 3-8h4"/>','<rect x="3" y="3" width="18" height="6" rx="1"/><rect x="3" y="13" width="18" height="8" rx="1"/>'];
+$("#whyGrid").innerHTML=WHY.map((w,i)=>`<div class="glass card rv"><span class="ibox">${svg(WI[i])}</span><h3>${w}</h3></div>`).join("");
+$("#layers").innerHTML=LAYERS.map((l,i)=>`${i?'<div class="arr" aria-hidden="true">&#9660;</div>':""}<button class="layer" aria-pressed="false" data-i="${i}"><span class="ibox" style="width:30px;height:30px;font-size:.8rem">${i+1}</span>${l[0]}</button>`).join("");
+function pick(i){document.querySelectorAll(".layer").forEach((b,j)=>b.setAttribute("aria-pressed",j==i));$("#detail").innerHTML=`<h3>${LAYERS[i][0]}</h3><p>${LAYERS[i][1]}</p>`}
+$("#layers").addEventListener("click",e=>{const b=e.target.closest(".layer");if(b)pick(+b.dataset.i)});pick(1);
+$("#nowGrid").innerHTML=NOW.map(n=>`<div class="glass card" style="padding:18px 22px"><b>${n}</b></div>`).join("");
+$("#path").innerHTML=PATH.map((p,i)=>`${i?'<span class="a" aria-hidden="true">&rarr;</span>':""}<span class="n">${p}</span>`).join("");
+/* nav behaviour */
+const burger=$("#burger"),links=$("#links");
+burger.onclick=()=>{const o=links.classList.toggle("open");burger.setAttribute("aria-expanded",o)};
+links.addEventListener("click",e=>{if(e.target.tagName==="A")links.classList.remove("open")});
+const secs=NAV.map(([,id])=>document.getElementById(id));
+addEventListener("scroll",()=>{let cur="home";secs.forEach(s=>{if(s.getBoundingClientRect().top<140)cur=s.id});links.querySelectorAll("a:not(.btn)").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+cur))},{passive:true});
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+const tio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){$("#tl").classList.add("go");document.querySelectorAll(".step").forEach((s,i)=>setTimeout(()=>s.classList.add("show"),i*260));tio.disconnect()}}),{threshold:.1});
+tio.observe($("#tl"));
+addEventListener("load",()=>{const l=$("#load");l.style.opacity=0;setTimeout(()=>l.remove(),500)});
+/* form */
+const F={n:v=>v.trim().length>=2||"Enter your name (at least 2 characters).",m:v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())||"Enter a valid email address.",s:v=>v.trim().length>=3||"Enter a subject (at least 3 characters).",b:v=>v.trim().length>=10||"Write a message of at least 10 characters."};
+$("#cf").addEventListener("submit",e=>{
+ e.preventDefault();if($("#hp").value)return;let ok=true,first=null;
+ for(const k in F){const el=document.getElementById(k),r=F[k](el.value);$("#e-"+k).textContent=r===true?"":r;el.setAttribute("aria-invalid",r!==true);if(r!==true){ok=false;first=first||el}}
+ if(!ok){first.focus();$("#ok").textContent="";return}
+ const body=`${$("#b").value}\n\nFrom: ${$("#n").value} <${$("#m").value}>`;
+ location.href=`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent($("#s").value)}&body=${encodeURIComponent(body)}`;
+ $("#ok").textContent="Your email app should open with the message ready to send.";
+});
+</script>
+</body>
+</html>
